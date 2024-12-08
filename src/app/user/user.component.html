@@ -1,0 +1,40 @@
+<div class="container">
+    <i (click)="goBack()" class="fa-solid fa-circle-arrow-left"></i>
+    <h2>User Management System</h2>
+</div>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="title">
+        <h2><i class="fa-regular fa-address-card"></i> {{isEdite?"Update User":"Add User"}}</h2>
+    </div>
+
+    <div class="input-field">
+        <label>Full Name</label>
+        <input type="text" formControlName="fullName" 
+        [ngClass]="{'error': userForm.controls['fullName'].touched && userForm.controls['fullName'].invalid}">
+    </div>
+
+    <div class="input-field">
+        <label>User Name</label>
+        <input type="text" formControlName="userName" 
+        [ngClass]="{'error': userForm.controls['userName'].touched && userForm.controls['userName'].invalid}">
+    </div>
+
+    <div class="input-field">
+        <label>Mobile No</label>
+        <input type="tel" formControlName="mobileNo" 
+        [ngClass]="{'error': userForm.controls['mobileNo'].touched && userForm.controls['mobileNo'].invalid}">
+    </div>
+
+    <div class="input-field">
+        <label>Age</label>
+        <input type="number" formControlName="age" 
+        [ngClass]="{'error': userForm.controls['age'].touched && userForm.controls['age'].invalid}">
+    </div>
+
+    <div class="input-field">
+        <button [disabled]="userForm.invalid" type="submit">{{isEdite?"Update User":"Add User"}}</button> 
+    </div>
+</form>
+
+<app-loader *ngIf="loading"></app-loader>

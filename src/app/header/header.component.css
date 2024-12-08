@@ -1,0 +1,83 @@
+.header{
+    width: 100%;
+    height: 80px;
+    padding: 0px 3%;
+    background: #0D4671;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.header button{
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+   border-radius:2px 15px ;
+   border: 4px solid #92E2E3;
+   color: white;
+   background: transparent;
+   cursor: pointer;
+}
+ .header button:active{
+    background: #167b7d;
+    border: 4px solid #fff;
+    color: white;
+}
+table{
+    margin: 40px auto;
+    width: 500px;
+    border-collapse: collapse;
+    gap: 10px;
+    border-radius: 4px;
+    
+}
+table thead{
+    width: 100%;
+    background: #92E2E3;
+
+}
+table th{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+table tbody tr{
+    border-bottom: 2px solid #92E2E3;
+}
+table tbody tr td{
+    font-size: 14px;
+    text-align: center;
+    padding: 6px;
+
+}
+.action i {
+    font-size: 15px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.action i:first-child {
+    color: green;
+}
+.action i:first-child:active {
+    color: rgb(60, 187, 60);
+}
+
+.action i:last-child {
+    color: crimson;
+}
+.action i:last-child:active {
+    color: red;
+}
+
+th:last-child, td:last-child {
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
